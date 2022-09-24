@@ -1,0 +1,207 @@
+div#resume{
+    padding: 5rem .8rem;
+    div[visibility = "true"]{
+        display: flex;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+    @keyframes fadeIn {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    div[visibility = "false"]{
+        display: none;
+    }
+    > h2{
+        text-align: center;
+        font-size: 1.2rem;
+        color: $write-color-secondary;
+    }
+    > h3{
+        text-align: center;
+        font-size: 3rem;
+        padding: 1rem 0 3rem;
+    }
+    .resume-menu{
+        display: flex;
+        justify-content: space-around;
+        box-shadow: $shadow-1;
+        border-radius: $border-radius;
+        margin: auto;
+        #resume-menu-button{
+            cursor: pointer;
+            width: 100%;
+            padding: 2rem 2rem;
+            text-align: center;
+            font-size: 1.2rem;
+            @include transition(all, .5);
+            &:hover{
+                border-radius: $border-radius !important;
+                box-shadow: $shadow-1 !important;
+                color: $write-color-secondary !important;
+            }
+        }
+    }
+
+    .resume-education-container{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 5px;
+        .resume-education-container-column{
+            padding: 2rem 0;
+            overflow: hidden;
+            width: 49%;
+            > p{
+                color: $write-color-secondary;
+            }
+            h2{
+                font-size: 2.5rem;
+                padding: 1rem 0 3rem;
+            }
+            .resume-education-container-column-boxes{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: flex-end;
+                border-left: 5px solid #0d10136c;
+                .resume-education-container-column-box{
+                    background-image: $background-color;
+                    width: 95%;
+                    width: 93%;
+                    padding: 2rem;
+                    border: $border-radius;
+                    margin-bottom: 3rem;
+                    border-radius: $border-radius;
+                    box-shadow: $shadow-1;
+                    position: relative;
+                    & > p{
+                        border-top: $border;
+                        color: $write-color-2;
+                        padding: 1rem 0;
+                        font-size: 1.2rem;
+                        max-height: 10ch;
+                        @include transition(color, .5);
+                        line-height: 1.6;
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        display: inline-block;
+                        width: 10%;
+                        height: 5px;
+                        background-color: #0d10136c;
+                        left: -10%;
+                        top: 20%;
+                    }
+                    &:hover{
+                        background-image: $background-color-hover;
+                        .resume-education-container-column-box-header-left h4{
+                            color: #FFF !important;
+                        }
+                        p{
+                            color: rgb(196, 207, 222);
+                        }
+                        .resume-education-container-column-box-header-right p{
+                            background-image: $background-color-hover !important;
+                        }
+                    }
+                    &:last-child{
+                        margin: 0
+                    }
+                    .resume-education-container-column-box-header{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .resume-education-container-column-box-header-left{
+                            h2{
+                                font-size: 1.5rem;
+                                padding: 1rem 0;
+                            }
+                            h3{
+                                color: $write-color-2;
+                                padding: 0 0 2rem;
+                                @include transition(color, .5);
+                            }
+                        }
+                        .resume-education-container-column-box-header-right{
+                            p{
+                                background-image: $background-color;
+                                border-radius: $border-radius;
+                                color: $write-color-secondary;
+                                padding: .7rem .9rem;
+                                box-shadow: $shadow-1;
+                                font-weight: bold;
+                                @include transition(background-color, 1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .resume-proSkill-container{
+        display: flex;
+        justify-content: space-between;
+        .col{
+            width: 46%;
+            margin-top: 2rem;
+            p:first-child{
+                color: $write-color-secondary;
+            }
+            h2{
+                font-size: 2.5rem;
+                padding: 1rem 0 2rem;
+            }
+            .progress{
+                margin: 15px 0 40;
+                width: 100%;
+                height: 12px;
+                padding: 3px;
+                background-image: $background-color;
+                box-shadow: inset 8px 8px 16px #00000075, inset -8px -8px 16px #383e4575;
+                border-radius: $border-radius;
+                &:nth-of-type(1) .progress-bar{
+                    width: 100%;
+                }
+                &:nth-of-type(2) .progress-bar{
+                    width: 95%;
+                }
+                &:nth-of-type(3) .progress-bar{
+                    width: 75%;
+                }
+                &:nth-of-type(4) .progress-bar{
+                    width: 90%;
+                }
+                &:nth-of-type(5) .progress-bar{
+                    width: 85%;
+                }
+                .progress-bar{
+                    position: relative;
+                    background: linear-gradient(145deg, #6a67ce 0%, #fc636b 100%);
+                    height: 100%;
+                    border-radius: $border-radius;
+                    transform-origin: left;
+                    animation: bar 1s forwards;
+                    width: 0;
+                    @include transform(scaleX(0));
+                    @keyframes bar {
+                        100%{
+                            @include transform(scaleX(1));
+                        }
+                    }
+                    span{
+                        position: absolute;
+                        top: -20px;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

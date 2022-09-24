@@ -1,0 +1,63 @@
+div#features{
+    padding: 5rem .8rem;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > h2{
+        font-size: 1.2rem;
+        color: $write-color-secondary;
+    }
+    > h3{
+        font-size: 3rem;
+        padding: 1rem 0 3rem;
+    }
+    .features-boxes{
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        .features-box{
+            cursor: pointer;
+            padding: 2rem;
+            border-radius: $border-radius;
+            background-image: $background-color;
+            box-shadow: $shadow-1;
+            width: 32%;
+            @include transition(padding-top, .5);
+            &:hover{
+                background-image: $background-color-hover;
+                padding-top: 1rem;
+                .fa-right-to-bracket{
+                    @include transform(translateY(-10px));
+                    opacity: 1;
+                }
+            }
+
+            i{
+                padding: 1rem 0;
+                font-size: 2rem;
+                color: $write-color-secondary;
+            }
+            h3{
+                color: $write-color-primary-dark;
+                font-size: 1rem;
+                padding: 1rem 0;
+                overflow-y: hidden;
+                max-height: 5ch;
+            }
+            h2{
+                font-size: 1.1rem;
+                line-height: 1.5;
+                overflow-y: hidden;
+                max-height: 9ch;
+            }
+            .fa-right-to-bracket{
+                margin-top: 1rem;
+                @include transition(transform, .5);
+                opacity: 0;
+            }
+        }
+
+    }
+}

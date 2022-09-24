@@ -1,0 +1,80 @@
+div#client{
+    padding: 5rem .8rem;
+    border-top: $border;
+    border-bottom: $border;
+    .header{
+        > h2{
+            text-align: center;
+            font-size: 1.2rem;
+            color: $write-color-secondary;
+        }
+        > h3{
+            text-align: center;
+            font-size: 3rem;
+            padding: 1rem 0 3rem;
+        }
+    }
+    .clientContainer{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        .leftSide{
+            width: 30%;
+            margin: 1rem 1rem;
+            ul{
+                position: sticky;
+                top: 30px;
+                background-image: $background-color;
+                border-radius: $border-radius;
+                box-shadow: $shadow-1;
+                li{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    color: $write-color-primary;
+                    padding: 2rem 0;
+                    @include transition(color, .5);
+                    &:hover{
+                        color: $write-color-secondary !important;
+                        background-image: $background-color-hover !important;
+                        border-radius: $border-radius !important;
+                        box-shadow: $shadow-1 !important;
+                    }
+                }
+            }
+        }
+        .rightSide{
+            width: 65%;
+            .javascript{
+                display: flex;
+                justify-content: space-evenly;
+                flex-flow: row wrap;
+                .card{
+                    cursor: pointer;
+                    background-image: $background-color;
+                    border-radius: $border-radius;
+                    box-shadow: $shadow-1;
+                    width: 30%;
+                    margin: 10px;
+                    &:hover{
+                        background-image: $background-color-hover;
+                    }
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                    p{
+                        text-align: center;
+                        padding: 1rem 0;
+                        border-top: 1px solid black;
+                        @include transition(color, .5);
+                        &:hover{
+                            color: $write-color-secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

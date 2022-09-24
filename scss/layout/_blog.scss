@@ -1,0 +1,78 @@
+div#blog{
+    padding: 5rem .8rem;
+    border-top: $border;
+    border-bottom: $border;
+    > h2{
+        text-align: center;
+        font-size: 1.2rem;
+        color: $write-color-secondary;
+    }
+    > h3{
+        text-align: center;
+        font-size: 3rem;
+        padding: 1rem 0 3rem;
+    }
+    .blog-cards{
+        display: flex;
+        justify-content: center;
+        .blog-card{
+            cursor: pointer;
+            width: 45%;
+            padding: 2rem 1.5rem;
+            margin: 1% .5%;
+            background-image: $background-color;
+            box-shadow: $shadow-1;
+            border-radius: $border-radius;
+            &:hover{
+                background-image: $background-color-hover;
+                .img-container{
+                    img{
+                        @include transform(scale(1.2));
+                    }
+                } 
+                .explain{
+                    p{
+                        i{
+                            @include transform(rotate(360deg));
+                        }
+                    }
+                }
+            }
+            .img-container{
+                width: 100%;
+                border-radius: $border-radius;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: auto;
+                    @include transition(transform, .5);
+                }
+            }
+            .explain{
+                p:nth-child(1){
+                    max-height: 2ch;
+                    overflow: hidden;
+                    color: $write-color-secondary;
+                }
+                i{
+                    @include transition(transform, 1);
+                }
+                display: flex;
+                justify-content: space-between;
+                padding: 1.5rem 0;
+            }
+            .header{
+                h2{
+                    max-height: 6ch;
+                    overflow: hidden;
+                    font-size: 1.3rem;
+                    line-height: 1.6;
+                    @include transition(color, .5);
+                    &:hover{
+                        color: $write-color-secondary;
+                    }
+                }
+            }
+        }
+    }
+}

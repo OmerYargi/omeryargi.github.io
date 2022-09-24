@@ -1,0 +1,23 @@
+@mixin transition($var, $duration) {
+    transition: $var #{$duration}s;
+    -o-transition: $var #{$duration}s;
+    -moz-transition: $var #{$duration}s;
+    -webkit-transition: $var #{$duration}s;
+}
+@mixin transform($var){
+    transform: $var;
+    -o-transform: $var;
+    -moz-transform: $var;
+    -webkit-transform: $var;
+}
+@mixin animation($var){
+    animation: $var;
+    -o-animation: $var;
+    -moz-animation: $var;
+    -webkit-animation: $var;
+}
+@mixin media($var){
+    @media (max-width: #{$var}px){
+        @content;
+    }
+}

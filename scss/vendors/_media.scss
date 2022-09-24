@@ -1,0 +1,296 @@
+@media(max-width: 385px){
+    div#responsive-sideBar{
+        width: 300px !important;
+        padding: 40px 30px !important;
+        .top{
+            .sideBar-top-img{
+                width: 4rem !important;
+                height: 4rem !important;
+            }
+        }
+    }
+    div#resume{
+        .resume-education-container-column-box{
+            max-width: 80% !important;
+            min-width: 300px !important;
+            &::after{
+                width: 30% !important;
+                left: -30% !important;
+            }
+        }
+    }
+    div#client{
+        .clientContainer{
+            display: flex;
+            flex-direction: column;
+            .rightSide{
+                margin-top: 3rem;
+                .card{
+                    min-width: 100% !important;
+                }
+            }
+        }
+    }
+    div#contact{
+        .contact-container{
+            .contact-inputs{
+                .col{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+// *************************************************************
+@media(max-width: 575px){
+    div#home{
+        h1{
+            font-size: 6rem !important;
+        }
+        h2{
+            font-size: 1.7rem;
+        }
+        a{
+            color: $write-color-primary;
+            background-color: $primary-color;
+            margin-top: 1rem;
+            padding: 1rem 1rem;
+            border-radius: $border-radius;
+            @include transition(transform, .5);
+            &:hover{
+                @include transform(translateY(-10px));
+            }
+        }
+    }
+    div#portfolio{
+        .portfolio-boxes{
+            .portfolio-box{
+                width: 100% !important;
+            }
+        }
+    }
+    div#client{
+        .clientContainer{
+            display: flex;
+            flex-direction: column;
+            .rightSide{
+                margin-top: 3rem;
+                .card{
+                    min-width: 48%;
+                }
+            }
+        }
+    }
+    div#pricing{
+        .rightSide{
+            .substances{
+                ul{
+                    li{
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+    div#resume{
+        .resume-education-container-column-box{
+            min-width: 93% !important;
+        }
+    }
+}
+
+
+
+// *************************************************************
+@media(max-width: 767px){
+    div#portfolio{
+        .portfolio-boxes{
+            .portfolio-box{
+                width: 45%;
+            }
+        }
+    }
+    div#features{
+        .features-boxes{
+            justify-content: flex-start;
+            .features-box{
+                width: 100% !important;
+                margin: 5px;
+            }
+        }
+    }
+    div#resume{
+        .resume-proSkill-container{
+            justify-content: center;
+            flex-direction: column;
+            .col{
+                width: 100%;
+            }
+        }
+    }
+    div#pricing{
+        .rightSide{
+            width: 100%;
+            .pricingNav{
+                ul{
+                    flex-direction: column;
+                    li{
+                        width: 100%;
+                    }
+                }
+            }
+            .header-and-price{
+                flex-direction: column;
+                padding: 1rem 0 0 !important;
+                .price{
+                    margin: 2rem 0 0;
+                    width: 50%;
+                }
+            }
+            .bottom{
+                flex-direction: column;
+                text-align: center;
+                p{
+                    padding: .5rem 0;
+                }
+            }
+        }
+    }
+    div#blog{
+        .blog-cards{
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            .blog-card{
+                width: 100% !important;
+            }
+        }
+    }
+    div#contact{
+        .col{
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
+
+
+// *************************************************************
+@media(max-width: 991px){
+    ::-webkit-scrollbar{
+        width: 5px !important;
+    }
+    div#features{
+        .features-boxes{
+            justify-content: flex-start;
+            .features-box{
+                width: 48%;
+                margin: 1%;
+            }
+        }
+    }
+    div#resume{
+        .resume-menu{
+            flex-flow: row wrap;
+        }
+        .resume-education-container{
+            flex-direction: column;
+            .resume-education-container-column{
+                width: 100% !important;
+                .resume-education-container-column-boxes{
+                    width: 100%;
+                    .resume-education-container-column-box{
+                        min-width: 93% !important;
+                    }
+                }
+            }
+        }
+    }
+    div#client{
+        .clientContainer{
+            flex-direction: column;
+            .leftSide{
+                width: 100%;
+                margin: 1rem 0 !important;
+            }
+            .rightSide{
+                width: 100%;
+                .card{
+                    width: 30%;
+                    margin: 1% .5% !important;
+                }
+            }
+        }
+    }
+    div#pricing{
+        flex-direction: column;
+        .leftSide{
+            width: 100%;
+        }
+        .rightSide{
+            width: 100%;
+        }
+    }
+    div#blog{
+        .blog-cards{
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            .blog-card{
+                width: 49%;
+            }
+        }
+    }
+    div#contact{
+        .contact-container{
+            flex-direction: column;
+            .contact-information{
+                width: 100%;
+                padding: 2rem;
+                margin-bottom: 2rem;
+            }
+            .contact-inputs{
+                width: 100%;
+                padding: 1rem 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+
+
+// *************************************************************
+@media(max-width: 1199px){
+    #openResponsiveSideBar{
+        opacity: 1 !important;
+        @include transition(opacity, 1);
+    }
+    #sideBar{
+        display: none;
+    }
+    #master{
+        min-width: 100%;
+        margin: 0;
+    }
+    .resume-education-container-column-box-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start !important;
+        .resume-education-container-column-box-header-right{
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+
+// *************************************************************
+@media(max-width: 1399px){
+
+}
+@media(min-width: 1400px){
+}

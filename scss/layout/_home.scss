@@ -1,0 +1,31 @@
+div#home{
+    min-height: 100vh;
+    background: url(../../img/work2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+        color: $write-color-secondary;
+        font-size: 10rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    a{
+        color: $write-color-primary;
+        background-color: $primary-color;
+        margin-top: 1rem;
+        padding: 15px 30px;
+        border-radius: $border-radius;
+        @include transition(transform, .5);
+        &:hover{
+            @include transform(translateY(-10px));
+            color: $write-color-secondary;
+        }
+    }
+}

@@ -1,0 +1,126 @@
+div#pricing{
+    padding: 5rem .8rem;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    .leftSide{
+        width: 350px;
+        margin-bottom: 2rem;
+        .stick{
+            position: sticky;
+            top: 30px;
+            > h2{
+                font-size: 1.2rem;
+                color: $write-color-secondary;
+            }
+            > h3{
+                font-size: 3rem;
+                padding: 1rem 0 3rem;
+            }
+        }
+
+    }
+    .rightSide{
+        width: 55%;
+        background-image: $background-color;
+        border-radius: $border-radius;
+        box-shadow: $shadow-1;
+        .pricingNav{
+            background-image: $background-color;
+            box-shadow: $shadow-1;
+            border-radius: $border-radius;
+            ul{
+                display: flex;
+                justify-content: space-evenly;
+                li{
+                    cursor: pointer;
+                    padding: 2rem 0;
+                    text-align: center;
+                    width: 33.3%;
+                    font-size: 1.2rem;
+                    @include transition(color, .5);
+                    &:hover{
+                        color: $write-color-secondary !important;
+                        box-shadow: $shadow-1 !important;
+                        background-image: $background-color !important;
+                        border-radius: $border-radius !important;
+                    }
+                }
+            }
+        }
+        .staticContain{
+            padding: 1rem;
+            .header-and-price{
+                display: flex;
+                justify-content: space-between;
+                padding: 2rem 0;
+                .header{
+                    h2{
+                        font-size: 2rem;
+                    }
+                    p{
+                        color: $write-color-2;
+                        padding-top: 1rem;
+                    }
+                }
+                .price{
+                    p{
+                        color: $write-color-secondary;
+                        padding: 1rem 2rem;
+                        background-image: $background-color;
+                        box-shadow: $shadow-1;
+                        border-radius: $border-radius;
+                        font-size: 2rem;
+                        font-weight: bolder;
+                    }
+                }
+            }
+            .explain{
+                color: $write-color-2;
+                padding: 2rem 0;
+                width: 90%;
+                font-size: 1.3rem;
+            }
+            .substances{
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-flow: row wrap;
+                    padding-bottom: 2rem;
+                    li{
+                        width: 50%;
+                        padding: 1rem 0;
+                        font-size: 1.3rem;
+                        color: $write-color-3;
+
+                    }
+                    
+                }
+            }
+            .btn{
+                padding: 1rem 1rem;
+                button{
+                    background-image: $background-color;
+                    border: none;
+                    width: 100%;
+                    font-size: 1.2rem;
+                    color: $write-color-secondary;
+                    padding: 1.3rem 0;
+                    box-shadow: $shadow-1;
+                    border-radius: $border-radius;
+                    @include transition(transform, .5);
+                    &:hover{
+                        background-image: $background-color-hover;
+                        @include transform(translateY(-15px));
+                    }
+                }
+            }
+            .bottom{
+                display: flex;
+                justify-content: space-evenly;
+                padding: 1rem 0;
+                color: $write-color-2;
+            }
+        }
+    }
+}

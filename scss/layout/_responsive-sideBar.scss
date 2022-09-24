@@ -1,0 +1,98 @@
+div#responsive-sideBar{
+    width: 375px;
+    height: 100vh;
+    padding: 25px 40px;
+    background-color: $background-color-normal;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    @include transition (opacity, .5);
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+        width: 3px;
+    }
+    .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .sideBar-top-img{
+            background-image: url("../../img/me.jpg");
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .closeBtn{
+            border-radius: 50%;
+            cursor: pointer;
+            i{
+                color: $write-color-secondary;
+                background-image: $background-color;
+                box-shadow: $shadow-1;
+                border-radius: 50%;
+                width: 50px;
+                font-size: 20px;
+                text-align: center;
+                line-height: 50px;
+            }
+        }
+
+    }
+    .explain{
+        p{
+            color: $write-color-dark-white;
+            padding: 1rem 0;
+            line-height: 1.6;
+        }
+    }
+    .menu{
+        padding: 1rem 0 8rem;
+
+        ul{
+            li{
+                cursor: pointer;
+                color: $write-color-3;
+                padding: .8rem 0;
+                a{
+                    color: $write-color-primary;
+                    @include transition(color, .5);
+                    &:hover{
+                        color: $write-color-secondary;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        border-top: 2px solid $write-color-dark-white;
+        margin: auto;
+        text-align: center;
+        p{
+            margin-left: 1rem;
+            color: $write-color-primary;
+            padding: 1rem 0;
+        }
+        .sideBar-footer-social{
+            margin: 1em 0;
+            a{
+                i{
+                    color: $write-color-primary;
+                    background-image: linear-gradient(145deg, #1e2024, #23272b);
+                    font-size: 1.1rem;
+                    padding: 1rem;
+                    margin: .5rem;
+                    box-shadow: $shadow-1;
+                    border-radius: $border-radius;
+                    @include transition(transform, .5);
+                    &:hover{
+                        @include transform(translateY(-10px));
+                        box-shadow: $shadow-2;
+                    }
+                }
+            }
+        }
+    }
+}

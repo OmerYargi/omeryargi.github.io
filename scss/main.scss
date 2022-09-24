@@ -1,0 +1,89 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/reset";
+@import "base/typography";
+
+@import "components/buttons";
+
+@import "layout/blog";
+@import "layout/clients";
+@import "layout/contact";
+@import "layout/features";
+@import "layout/home";
+@import "layout/portfolio";
+@import "layout/pricing";
+@import "layout/responsive-sideBar";
+@import "layout/resume";
+@import "layout/sidebar";
+
+@import "vendors/media";
+::-webkit-scrollbar{
+    width: 10px;
+}
+// ScrollBar iteminin arkaplanı denilebilir
+::-webkit-scrollbar-track{
+    background: #1e2024;
+}
+// Scrollbar çubuğu içindeki çizgi
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: white;
+}
+// Scrollbar çubuğu içindeki çizginin üzerine gelinmesi
+::-webkit-scrollbar-thumb:hover{
+    border-radius: 10px;
+    background-color: red;
+}
+@supports (scrollbar-color: red blue){
+    *{
+        scrollbar-color: #a0a8b3 #1e2024;
+        scrollbar-width: thin;
+    }
+}
+body{
+    background-color: #212428;
+    color: $write-color-primary;
+    overflow-y: auto;
+
+    #master{
+        margin-left: auto;
+        width: calc(100% - 300px);
+        position: relative;
+        #openResponsiveSideBar{
+            cursor: pointer;
+            opacity: 0;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            i{
+                color: $write-color-secondary;
+                font-size: 1.8rem;
+            }
+        }
+
+        .goToTopBtn{
+            cursor: pointer;
+            z-index: 3;
+            position: fixed;
+            right: 3rem;
+            bottom: 3rem;
+            background: $background-color;
+            border-radius: 50%;
+            box-shadow: $shadow-1;
+            display: none;
+            &.active{
+                display: block;
+            }
+            i{
+                padding: 15px;
+                color: $write-color-secondary;
+            }
+        }
+
+        .master-container{
+            max-width: 1400px;
+            margin: auto;
+        }
+    }
+}
