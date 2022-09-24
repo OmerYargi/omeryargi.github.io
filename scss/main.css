@@ -613,14 +613,21 @@ div#pricing .rightSide .staticContain .header-and-price .header p {
   color: #878e99;
   padding-top: 1rem;
 }
+div#pricing .rightSide .staticContain .header-and-price .price {
+  border: 1px solid black;
+  width: 100%;
+  max-width: 300px;
+}
 div#pricing .rightSide .staticContain .header-and-price .price p {
   color: #ff014f;
+  background: linear-gradient(135deg, #1e2024, #23272b);
+  text-align: center;
+  width: 100%;
   padding: 1rem 2rem;
-  background-image: linear-gradient(135deg, #1e2024, #23272b);
   box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
   border-radius: 1rem;
   font-size: 2rem;
-  font-weight: bolder;
+  font-weight: 700;
 }
 div#pricing .rightSide .staticContain .explain {
   color: #878e99;
@@ -864,9 +871,8 @@ div#resume .resume-education-container .resume-education-container-column .resum
   border-left: 5px solid rgba(13, 16, 19, 0.4235294118);
 }
 div#resume .resume-education-container .resume-education-container-column .resume-education-container-column-boxes .resume-education-container-column-box {
-  background-image: linear-gradient(135deg, #1e2024, #23272b);
+  background: linear-gradient(135deg, #1e2024, #23272b);
   width: 95%;
-  width: 93%;
   padding: 2rem;
   border: 1rem;
   margin-bottom: 3rem;
@@ -875,16 +881,19 @@ div#resume .resume-education-container .resume-education-container-column .resum
   position: relative;
 }
 div#resume .resume-education-container .resume-education-container-column .resume-education-container-column-boxes .resume-education-container-column-box > p {
-  border-top: 1px solid #161718;
   color: #878e99;
   padding: 1rem 0;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  height: auto;
+  line-height: 1.6;
+  border-top: 1px solid #161718;
   font-size: 1.2rem;
-  max-height: 10ch;
+  max-height: 19ch;
   transition: color 0.5s;
   -o-transition: color 0.5s;
   -moz-transition: color 0.5s;
   -webkit-transition: color 0.5s;
-  line-height: 1.6;
 }
 div#resume .resume-education-container .resume-education-container-column .resume-education-container-column-boxes .resume-education-container-column-box::after {
   content: "";
@@ -1124,9 +1133,6 @@ div#resume .resume-proSkill-container .col .progress .progress-bar span {
   div#client .clientContainer .rightSide .card {
     min-width: 100% !important;
   }
-  div#contact .contact-container .contact-inputs .col {
-    width: 100%;
-  }
 }
 @media (max-width: 575px) {
   div#home h1 {
@@ -1221,9 +1227,8 @@ div#resume .resume-proSkill-container .col .progress .progress-bar span {
   div#blog .blog-cards .blog-card {
     width: 100% !important;
   }
-  div#contact .col {
+  div#contact .contact-container .contact-inputs .col {
     width: 100%;
-    display: block;
   }
 }
 @media (max-width: 991px) {

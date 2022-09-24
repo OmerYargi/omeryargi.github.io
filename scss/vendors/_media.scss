@@ -31,15 +31,6 @@
             }
         }
     }
-    div#contact{
-        .contact-container{
-            .contact-inputs{
-                .col{
-                    width: 100%;
-                }
-            }
-        }
-    }
 }
 
 
@@ -169,9 +160,12 @@
         }
     }
     div#contact{
-        .col{
-            width: 100%;
-            display: block;
+        .contact-container{
+            .contact-inputs{
+                .col{
+                    width: 100%;
+                }
+            }
         }
     }
 }

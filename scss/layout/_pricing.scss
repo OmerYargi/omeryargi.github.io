@@ -64,14 +64,19 @@ div#pricing{
                     }
                 }
                 .price{
+                    border: 1px solid black;
+                    width: 100%;
+                    max-width: 300px;
                     p{
                         color: $write-color-secondary;
+                        background: $background-color;
+                        text-align: center;
+                        width: 100%;
                         padding: 1rem 2rem;
-                        background-image: $background-color;
                         box-shadow: $shadow-1;
                         border-radius: $border-radius;
                         font-size: 2rem;
-                        font-weight: bolder;
+                        font-weight: 700;
                     }
                 }
             }
