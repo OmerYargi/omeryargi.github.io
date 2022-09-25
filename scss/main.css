@@ -614,7 +614,6 @@ div#pricing .rightSide .staticContain .header-and-price .header p {
   padding-top: 1rem;
 }
 div#pricing .rightSide .staticContain .header-and-price .price {
-  border: 1px solid black;
   width: 100%;
   max-width: 300px;
 }
